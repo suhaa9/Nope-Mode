@@ -1,12 +1,10 @@
 import streamlit as st
 
-# Predefined creepy keywords (can expand or replace with NLP later)
 CREEP_KEYWORDS = [
     "babe", "send pic", "hot", "sexy", "alone?", "miss your body", "horny", "naughty",
     "boobs", "cute smile", "strip", "video call now", "legs", "what are you wearing"
 ]
 
-# Smart response options
 RESPONSES = [
     "I'm not comfortable with this conversation.",
     "Let's keep this respectful.",
@@ -14,7 +12,6 @@ RESPONSES = [
     "Goodbye."
 ]
 
-# Function to calculate "creep score"
 def creep_score(message):
     message_lower = message.lower()
     score = 0
@@ -27,8 +24,6 @@ def creep_score(message):
 
     return min(score, 100), flagged_words
 
-
-# ----- Streamlit UI -----
 st.set_page_config(page_title="NopeMode | Anti-Creep Chat Scanner", page_icon="🚫")
 
 st.title("🚫 NopeMode")
